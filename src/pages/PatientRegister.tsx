@@ -1,6 +1,5 @@
 import { Form } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
 
 export async function action() {
   const form: HTMLFormElement = document.querySelector('#form')!
@@ -14,11 +13,11 @@ export async function action() {
     },
     body: JSON.stringify(data),
   })
+  alert('Se ha registrado con exito!')
   return response.json()
 }
 
 function PatientRegister() {
-  const navigate = useNavigate()
   return (
     <Form
       id='form'
@@ -57,10 +56,6 @@ function PatientRegister() {
         />
       </div>
       <button
-        onClick={() => {
-          alert('Se ha registrado con exito!')
-          navigate('/patient-login')
-        }}
         type='submit'
         className='bg-sky-500 text-white font-bold p-1.5 m-2 rounded-md'
       >

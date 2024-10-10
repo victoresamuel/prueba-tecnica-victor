@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { action as doctorAction } from './pages/DoctorRegister.tsx'
 import { action as patientAction } from './pages/PatientRegister.tsx'
-import { action as doctorLoginAction } from './pages/DoctorLogin.tsx'
 import { action as patientDateAction } from './pages/PatientHome.tsx'
 
 import DoctorRegister from './pages/DoctorRegister.tsx'
@@ -34,7 +33,6 @@ const router = createBrowserRouter([
   {
     path: '/doctor-login',
     element: <DoctorLogin />,
-    action: doctorLoginAction,
   },
   {
     path: '/doctor/home',

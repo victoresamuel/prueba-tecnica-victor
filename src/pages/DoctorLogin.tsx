@@ -1,13 +1,6 @@
 import { Form } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
-export async function action() {
-  const response = await fetch('http://localhost:3000/doctores')
-  const data = await response.json()
-  console.log(data)
-  return data
-}
-
 function DoctorLogin() {
   const navigate = useNavigate()
 

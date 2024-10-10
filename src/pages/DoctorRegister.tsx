@@ -1,7 +1,6 @@
 import { Form } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { states, specialtys } from '../data'
-import { useNavigate } from 'react-router-dom'
 
 export async function action() {
   const form: HTMLFormElement = document.querySelector('#form')!
@@ -15,11 +14,11 @@ export async function action() {
     },
     body: JSON.stringify(data),
   })
+  alert('Su solicitud ha sido enviada y esta pendiente por confirmacion')
   return response.json()
 }
 
 function DoctorRegister() {
-  const navigate = useNavigate()
   return (
     <Form
       id='form'
@@ -75,12 +74,6 @@ function DoctorRegister() {
         />
       </div>
       <button
-        onClick={() => {
-          alert(
-            'Su solicitud ha sido enviada y esta pendiente por confirmacion'
-          )
-          navigate('/doctor-login')
-        }}
         className='bg-sky-500 text-white font-bold p-1.5 m-2 rounded-md'
         type='submit'
       >
