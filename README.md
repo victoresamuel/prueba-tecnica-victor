@@ -31,7 +31,7 @@ o
 npm run dev
 ```
 
-- Abrir otra instancio de la terminal y ejecutar el comando:
+- Abrir otra instancia de la terminal y ejecutar el comando:
 
 ```js
 npx json-server db.json
