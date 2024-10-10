@@ -38,6 +38,10 @@ npx json-server db.json
 ```
 
 - Ingresar a la URL: http://localhost:5173/ o la url que arroje la terminal al momento de ejecutar el comando "pnpm run dev"
+- Para ingresar al panel de administrador debe ingresar la URL: http://localhost:5173/admin. Las credenciales a ingresar son:
+
+Usuario: admin
+Contraseña: admin
 
 ## DOCUMENTACION
 
