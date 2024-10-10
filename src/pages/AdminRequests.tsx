@@ -4,6 +4,7 @@ import { useState } from 'react'
 type Props = {
   id: string
   name: string
+  lastname: string
   specialty: string
   location: string
 }
@@ -20,13 +21,14 @@ function AdminRequests() {
   }, [])
 
   return (
-    <div>
-      <div>
+    <div className='flex items-start justify-center w-full'>
+      <div className='flex flex-col items-center'>
         <h2>SOLICITUDES</h2>
         <table>
           <thead>
             <tr>
               <th scope='col'>Nombre</th>
+              <th scope='col'>Apellido</th>
               <th scope='col'>Especialidad</th>
               <th scope='col'>Ubicacion</th>
               <th scope='col'></th>
@@ -36,6 +38,7 @@ function AdminRequests() {
             {data.map((doctor: Props) => (
               <tr>
                 <td>{doctor.name}</td>
+                <td>{doctor.lastname}</td>
                 <td>{doctor.specialty}</td>
                 <td>{doctor.location}</td>
                 <td>
@@ -56,8 +59,9 @@ function AdminRequests() {
                         },
                       })
                       alert('La solicitud del doctor ha sido aprobada')
+                      window.location.reload()
                     }}
-                    className='bg-green-300'
+                    className='bg-green-500 p-2 rounded-md m-2'
                   >
                     Aceptar
                   </button>
@@ -72,8 +76,9 @@ function AdminRequests() {
                         },
                       })
                       alert('La solicitud del doctor ha sido rechazada')
+                      window.location.reload()
                     }}
-                    className='bg-red-400'
+                    className='bg-red-500 p-2 rounded-md m-2'
                   >
                     Rechazar
                   </button>

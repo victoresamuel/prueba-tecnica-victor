@@ -1,30 +1,7 @@
 {
-  "doctores": [
-    {
-      "id": "ff9a",
-      "name": "Maria",
-      "lastname": "Salazar",
-      "specialty": "Medicina Interna",
-      "location": "Amazonas",
-      "email": "maria@gmail.com",
-      "password": "123"
-    }
-  ],
+  "doctores": [],
   "solicitudes": [],
-  "citas": [
-    {
-      "id": "684d",
-      "doctor": "ff9a",
-      "date": "2024-10-12",
-      "status": "approved"
-    },
-    {
-      "id": "b6af",
-      "doctor": "ff9a",
-      "date": "2024-10-12",
-      "status": "declined"
-    }
-  ],
+  "citas": [],
   "pacientes": [],
   "administrador": [
     {

@@ -1,5 +1,6 @@
 import { Form } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export async function action() {
   const form: HTMLFormElement = document.querySelector('#form')!
@@ -17,6 +18,7 @@ export async function action() {
 }
 
 function PatientRegister() {
+  const navigate = useNavigate()
   return (
     <Form
       id='form'
@@ -54,7 +56,16 @@ function PatientRegister() {
           className='border border-black'
         />
       </div>
-      <button type='submit'>Enviar</button>
+      <button
+        onClick={() => {
+          alert('Se ha registrado con exito!')
+          navigate('/patient-login')
+        }}
+        type='submit'
+        className='bg-sky-500 text-white font-bold p-1.5 m-2 rounded-md'
+      >
+        ENVIAR
+      </button>
       <p>Ya posee una cuenta? Inicie sesion </p>
       <Link to={'/patient-login'} className='font-bold text-blue-700'>
         Aqui

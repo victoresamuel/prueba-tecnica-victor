@@ -20,13 +20,6 @@ type DoctorProps = {
   password: string
 }
 
-type DateProps = {
-  id: string
-  doctor: string
-  date: string
-  status: string
-}
-
 function AdminExport() {
   const [data, setData] = useState([])
   const [doctorData, setDoctorData] = useState([])
@@ -66,14 +59,6 @@ function AdminExport() {
     fetch('http://localhost:3000/citas')
       .then((response) => response.json())
       .then((dateData) => {
-        dateData = dateData.map((date: DateProps) => {
-          return {
-            id: date.id,
-            doctor: date.doctor,
-            date: date.date,
-            status: date.status,
-          }
-        })
         setDateData(dateData)
       })
   }, [])
@@ -83,24 +68,28 @@ function AdminExport() {
         <div className='flex gap-4'>
           <h2>EXPORTAR TABLA DE PACIENTES</h2>
           <button className='flex flex-col text-sky-500'>
-            <CSVLink data={data} separator=';'>
-              Export
+            <CSVLink data={data} separator=';' filename='Tabla-de-pacientes'>
+              Exportar
             </CSVLink>
           </button>
         </div>
         <div className='flex gap-4'>
           <h2>EXPORTAR TABLA DE DOCTORES</h2>
           <button className='flex flex-col text-sky-500'>
-            <CSVLink data={doctorData} separator=';'>
-              Export
+            <CSVLink
+              data={doctorData}
+              separator=';'
+              filename='Tabla-de-doctores'
+            >
+              Exportar
             </CSVLink>
           </button>
         </div>
         <div className='flex gap-4'>
           <h2>EXPORTAR TABLA DE CITAS</h2>
           <button className='flex flex-col text-sky-500'>
-            <CSVLink data={dateData} separator=';'>
-              Export
+            <CSVLink data={dateData} separator=';' filename='Tabla-de-citas'>
+              Exportar
             </CSVLink>
           </button>
         </div>

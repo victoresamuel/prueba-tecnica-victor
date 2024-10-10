@@ -22,7 +22,9 @@ export async function action() {
     },
     body: JSON.stringify(data),
   })
-  alert('Su cita ha sido enviada al doctor y esta pendiente por confirmacion')
+  alert(
+    'Su solicitud de cita ha sido enviada al doctor y esta pendiente por confirmacion'
+  )
   return response.json()
 }
 
@@ -58,7 +60,12 @@ function PatientHome() {
       </select>
       <label htmlFor='date'>Elija la fecha</label>
       <input required type='date' name='date' />
-      <button type='submit'>Enviar</button>
+      <button
+        type='submit'
+        className='bg-sky-500 text-white font-bold p-1.5 m-2 rounded-md'
+      >
+        ENVIAR
+      </button>
     </Form>
   )
 }
