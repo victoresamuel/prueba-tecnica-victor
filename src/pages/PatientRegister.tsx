@@ -26,13 +26,29 @@ function PatientRegister() {
       <h2 className='font-bold'>FORMULARIO DE REGISTRO (PACIENTE)</h2>
       <div className='flex flex-col'>
         <label htmlFor='name'>Nombre</label>
-        <input type='text' name='name' className='border border-black' />
+        <input
+          required
+          type='text'
+          name='name'
+          className='border border-black'
+        />
         <label htmlFor='lastname'>Apellido</label>
-        <input type='text' name='lastname' className='border border-black' />
+        <input
+          required
+          type='text'
+          name='lastname'
+          className='border border-black'
+        />
         <label htmlFor='email'>Correo Electronico</label>
-        <input type='email' name='email' className='border border-black' />
+        <input
+          required
+          type='email'
+          name='email'
+          className='border border-black'
+        />
         <label htmlFor='password'>Contrasena</label>
         <input
+          required
           type='password'
           name='password'
           className='border border-black'

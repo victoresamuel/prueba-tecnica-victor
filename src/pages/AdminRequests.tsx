@@ -19,10 +19,6 @@ function AdminRequests() {
       })
   }, [])
 
-  function declineClick() {
-    alert('Solicitud Rechazada')
-  }
-
   return (
     <div>
       <div>
@@ -59,6 +55,7 @@ function AdminRequests() {
                           'Content-Type': 'application/json',
                         },
                       })
+                      alert('La solicitud del doctor ha sido aprobada')
                     }}
                     className='bg-green-300'
                   >
@@ -74,6 +71,7 @@ function AdminRequests() {
                           'Content-Type': 'application/json',
                         },
                       })
+                      alert('La solicitud del doctor ha sido rechazada')
                     }}
                     className='bg-red-400'
                   >

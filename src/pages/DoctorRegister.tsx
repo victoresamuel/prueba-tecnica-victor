@@ -14,6 +14,7 @@ export async function action() {
     },
     body: JSON.stringify(data),
   })
+  alert('Su solicitud ha sido enviada y esta pendiente por confirmacion')
   return response.json()
 }
 
@@ -27,11 +28,26 @@ function DoctorRegister() {
       <h2 className='font-bold'>FORMULARIO DE REGISTRO (DOCTOR)</h2>
       <div className='flex flex-col gap-2'>
         <label htmlFor='name'>Nombre</label>
-        <input type='text' name='name' className='border border-black' />
+        <input
+          type='text'
+          name='name'
+          required
+          className='border border-black'
+        />
         <label htmlFor='lastname'>Apellido</label>
-        <input type='text' name='lastname' className='border border-black' />
-        <label htmlFor='location'>Especialidad</label>
-        <select name='location' id='location' className='border border-black'>
+        <input
+          type='text'
+          name='lastname'
+          required
+          className='border border-black'
+        />
+        <label htmlFor='specialty'>Especialidad</label>
+        <select
+          required
+          name='specialty'
+          id='specialty'
+          className='border border-black'
+        >
           {specialtys.map((specialty) => (
             <option value={specialty}>{specialty}</option>
           ))}
@@ -43,9 +59,15 @@ function DoctorRegister() {
           ))}
         </select>
         <label htmlFor='email'>Correo Electronico</label>
-        <input type='email' name='email' className='border border-black' />
+        <input
+          required
+          type='email'
+          name='email'
+          className='border border-black'
+        />
         <label htmlFor='password'>Contrasena</label>
         <input
+          required
           type='password'
           name='password'
           className='border border-black'

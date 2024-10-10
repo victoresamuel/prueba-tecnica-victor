@@ -4,11 +4,15 @@ import { Link } from 'react-router-dom'
 function App() {
   return (
     <ul className='flex h-full gap-4 justify-center items-center'>
-      <li className='text-black'>
-        <Link to='/doctor-register'>DOCTOR</Link>
+      <li className='text-black text-xl'>
+        <Link to='/doctor-register' className='hover:text-sky-500'>
+          DOCTOR
+        </Link>
       </li>
-      <li className='text-black'>
-        <Link to='/patient-register'>PATIENT</Link>
+      <li className='text-black text-xl'>
+        <Link to='/patient-register' className='hover:text-sky-500'>
+          PACIENTE
+        </Link>
       </li>
     </ul>
   )

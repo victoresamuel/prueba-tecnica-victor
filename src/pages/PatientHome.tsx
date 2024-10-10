@@ -22,6 +22,7 @@ export async function action() {
     },
     body: JSON.stringify(data),
   })
+  alert('Su cita ha sido enviada al doctor y esta pendiente por confirmacion')
   return response.json()
 }
 
@@ -43,7 +44,12 @@ function PatientHome() {
     >
       <h2>AGENDAR UNA CITA</h2>
       <label htmlFor='doctor'>Seleccione al doctor</label>
-      <select name='doctor' id='doctor' className='border border-black'>
+      <select
+        required
+        name='doctor'
+        id='doctor'
+        className='border border-black'
+      >
         {data.map((doctor: Props) => (
           <option
             value={doctor.id}
@@ -51,7 +57,7 @@ function PatientHome() {
         ))}
       </select>
       <label htmlFor='date'>Elija la fecha</label>
-      <input type='date' name='date' />
+      <input required type='date' name='date' />
       <button type='submit'>Enviar</button>
     </Form>
   )

@@ -1,11 +1,11 @@
 {
   "doctores": [
     {
-      "id": "6fb8",
+      "id": "ff9a",
       "name": "Maria",
       "lastname": "Salazar",
-      "specialty": "Traumatologo",
-      "location": "Yaracuy",
+      "specialty": "Medicina Interna",
+      "location": "Amazonas",
       "email": "maria@gmail.com",
       "password": "123"
     }
@@ -13,27 +13,19 @@
   "solicitudes": [],
   "citas": [
     {
-      "id": "0fe1",
-      "doctor": "6fb8",
-      "date": "2024-10-10",
-      "status": "pending"
+      "id": "684d",
+      "doctor": "ff9a",
+      "date": "2024-10-12",
+      "status": "approved"
     },
     {
-      "id": "1fe1",
-      "doctor": "6fb8",
-      "date": "2024-10-10",
+      "id": "b6af",
+      "doctor": "ff9a",
+      "date": "2024-10-12",
       "status": "declined"
     }
   ],
-  "pacientes": [
-    {
-      "id": "17a0",
-      "name": "Ramon",
-      "lastname": "Rojas",
-      "email": "ramon@gmail.com",
-      "password": "123"
-    }
-  ],
+  "pacientes": [],
   "administrador": [
     {
       "id": "1",

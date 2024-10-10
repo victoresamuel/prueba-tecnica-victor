@@ -49,6 +49,7 @@ function DoctorHome() {
                         },
                         body: JSON.stringify({ status: 'approved' }),
                       })
+                      alert('La cita ha sido aprobada')
                     }}
                     className='bg-green-300'
                   >
@@ -65,6 +66,7 @@ function DoctorHome() {
                         },
                         body: JSON.stringify({ status: 'declined' }),
                       })
+                      alert('La cita ha sido rechazada')
                     }}
                     className='bg-red-400'
                   >
